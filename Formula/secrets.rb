@@ -6,6 +6,6 @@ class Secrets < Formula
   version "alpha-rc1"
 
   def install
-    bin.install('secrets')
+    bin.install('secrets-darwin-amd64')
   end
 end

@@ -6,6 +6,11 @@ class Secrets < Formula
   version "alpha-rc1"
 
   def install
-    bin.install('secrets-darwin-amd64')
+    system "mv", "secrets-darwin-amd64", "secrets"
+    bin.install("secrets")
+  end
+
+  test do
+    system "#{bin}/secrets",  "--version"
   end
 end
